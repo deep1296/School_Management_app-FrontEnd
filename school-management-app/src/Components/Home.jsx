@@ -39,13 +39,15 @@ export const Home = () => {
         dispatch(fetchTeachersData(searchData));
         setSearch("");
     }
-    
+
     const handleReset = () => {
         //console.log("reset");
         dispatch(getTeachersData());
     }
 
     return(
+        
+
         <MDBContainer>
             <div style={{padding:"20px",borderBottom:"1px solid #f1f1f1"}}>
             <button onClick={handleAgeSortAsc} className="sortingBtn">Sort By Age Asc</button>
@@ -99,6 +101,8 @@ export const Home = () => {
                     </MDBCol>
                 </MDBRow>
             </div>
+           
         </MDBContainer>
+        
     )
 }
