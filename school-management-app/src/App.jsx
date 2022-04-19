@@ -5,6 +5,7 @@ import { Login } from "./Components/Login";
 import { useSelector, useDispatch } from "react-redux";
 import { Registration } from "./Components/Registration";
 import { Navbar } from "./Components/Navbar";
+import { Classes } from "./Components/Classes";
 
 const PrivateRoute = ({ isAuthenticated, children }) => {
   return isAuthenticated ? children : <Navigate to="/login" />;
@@ -22,6 +23,14 @@ function App() {
           element={
             <PrivateRoute isAuthenticated={isAuthenticated}>
               <Home />
+            </PrivateRoute>
+          }
+        />
+          <Route
+          path="/teachers/:id"
+          element={
+            <PrivateRoute isAuthenticated={isAuthenticated}>
+             <Classes/>
             </PrivateRoute>
           }
         />

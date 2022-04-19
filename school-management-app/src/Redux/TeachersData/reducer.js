@@ -14,14 +14,15 @@ export const teachersDataReducer = (store = initialState, {type,payload}) => {
             return {
                 ...store,
                 teachers: [...payload],
+                success: true,
             }
         case FETCH_TEACHERS_DATA_FAILURE:
             return {
                 ...store,
                 loading: false,
                 error: true,
-                errorMsg: payload
-
+                errorMsg: payload,
+                success: false,
             }
         case LOAD_TEACHERS_DATA:
             return {
