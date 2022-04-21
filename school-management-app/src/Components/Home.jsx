@@ -66,10 +66,9 @@ export const Home = () => {
             <button onClick={handleReset} className="sortingBtn">Reset</button>
 
             </div>
-            <div style={{marginTop:"100px"}}>
-                <MDBRow>
-                    <MDBCol size="12">
-                        <MDBTable style={{borderBottom:"1px solid #f1f1f1",width:"90%",margin:"auto"}}>
+            <div style={{marginTop:"60px"}}>
+
+                        <MDBTable style={{borderBottom:"1px solid #f1f1f1",width:"100%",margin:"auto"}}>
                             <MDBTableHead style={{height:"40px" ,backgroundColor:"#B6FFCE",color:"black"}}>
                                 <tr>
                                     <th>No</th>
@@ -98,8 +97,7 @@ export const Home = () => {
                                     ))
                                 )}
                         </MDBTable>
-                    </MDBCol>
-                </MDBRow>
+
             </div>
            
         </MDBContainer>
